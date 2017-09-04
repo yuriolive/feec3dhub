@@ -1,1 +1,1 @@
-web: node config.js && NODE_ENV=production node index.js
+web: node config.js && node index.js

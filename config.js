@@ -1,8 +1,10 @@
 var path = require('path');
 var fs = require('fs');
 
-var configName = './config.production.json';
-var configFile = require(configName);
+var configName = 'config.production.json';
+var configFile = JSON.parse(fs.readFileSync(configName, 'utf8'));
+
+process.env.NODE_ENV = 'production';
 
 configFile.server.port = process.env.PORT;
 configFile.database.connection = process.env.CLEARDB_DATABASE_URL;
