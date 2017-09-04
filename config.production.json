@@ -5,12 +5,17 @@
   },
   "database": {
     "client": "mysql",
-    "debug": false
+    "debug": false,
+    "connection": "connection"
   },
   "mail": {
     "transport": "SMTP",
     "options": {
-      "service": "Mailgun"
+      "service": "Mailgun",
+      "auth": {
+        "user": "user",
+        "pass": "pass"
+      }
     }
   },
   "logging": {
