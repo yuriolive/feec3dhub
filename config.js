@@ -5,7 +5,6 @@ var configName = './config.production.json';
 var configFile = require(configName);
 
 configFile.server.port = process.env.PORT;
-configFile.paths.contentPath = process.env.CLEARDB_DATABASE_URL;
 configFile.database.connection = process.env.CLEARDB_DATABASE_URL;
 configFile.mail.options.auth.user = process.env.MAILGUN_SMTP_LOGIN;
 configFile.mail.options.auth.pass = process.env.MAILGUN_SMTP_PASSWORD;
